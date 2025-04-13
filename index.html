@@ -4,44 +4,112 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gustavo Stelle Cunha | Desenvolvedor Android</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background-color: #f4f4f4;
-      color: #333;
+    :root {
+      --primary-color: #0d7377;
+      --bg-color: #1c1c1e;
+      --text-color: #e0e0e0;
+      --accent-color: #14ffec;
+      --card-bg: #2c2c2e;
+      --border-color: #3a3a3c;
     }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+
     header {
-      background-color: #6200ea;
+      background: linear-gradient(to right, var(--primary-color), var(--accent-color));
       color: white;
-      padding: 2rem;
+      padding: 3rem 1rem;
       text-align: center;
     }
+
+    header h1 {
+      font-size: 2.5rem;
+    }
+
     section {
       padding: 2rem;
-      max-width: 800px;
+      max-width: 900px;
       margin: auto;
     }
+
     h2 {
-      color: #6200ea;
+      color: var(--primary-color);
       margin-top: 2rem;
-    }
-    .project {
-      background: white;
-      border-radius: 8px;
-      padding: 1rem;
       margin-bottom: 1rem;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-bottom: 2px solid var(--accent-color);
+      display: inline-block;
     }
+
+    ul {
+      margin-left: 1.5rem;
+    }
+
+    .project {
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      transition: transform 0.2s ease;
+    }
+
+    .project:hover {
+      transform: translateY(-4px);
+    }
+
     .project img {
       max-width: 100%;
-      border-radius: 4px;
+      border-radius: 6px;
+      display: block;
+      margin: 1rem auto;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
     }
+
+    .contact {
+      margin-top: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
     .contact a {
-      display: inline-block;
-      margin-right: 1rem;
+      flex: 1 1 150px;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      justify-content: center;
+      padding: 0.75rem 1rem;
+      background-color: var(--card-bg);
+      color: var(--accent-color);
       text-decoration: none;
-      color: #6200ea;
+      border: 1px solid var(--primary-color);
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      font-weight: bold;
+    }
+
+    .contact a:hover {
+      background-color: var(--primary-color);
+      color: white;
+      border-color: var(--accent-color);
+    }
+
+    .contact i {
+      font-size: 1.2rem;
     }
   </style>
 </head>
@@ -72,28 +140,21 @@
       <h3>App IBG - Controle de Entregas</h3>
       <p><strong>Tecnologias:</strong> Kotlin, Jetpack Compose, Firebase</p>
       <p>Aplicativo corporativo para controle de entregas de cilindros de gás. Trabalhei em diversas telas e fluxos do app, incluindo agendamento de entregas, confirmação via QR Code, e histórico de pedidos. App utilizado por motoristas e operadores logísticos.</p>
-      <img src="images/ibg.png" alt="Print do app IBG"  width="300" height="600">
+      <img src="images/ibg.png" width="200" height="400" alt="Print do app IBG">
     </div>
 
     <div class="project">
       <h3>Lista Inteligente com IA</h3>
       <p><strong>Tecnologias:</strong> Kotlin Multiplatform, Compose, Koin, OpenAI API</p>
       <p>App multiplataforma que gera listas inteligentes com base no pedido do usuário (ex: "vou acampar, o que preciso?").</p>
-      <img src="https://via.placeholder.com/600x300" alt="Print do app IA">
-    </div>
-
-    <div class="project">
-      <h3>Controle de Hábitos</h3>
-      <p><strong>Tecnologias:</strong> Kotlin, Room, Jetpack Compose</p>
-      <p>App pessoal para controle de hábitos com gamificação e lembretes. Design clean e alta performance.</p>
-      <img src="https://via.placeholder.com/600x300" alt="Print do app hábitos">
+      <img src="images/buy-list.png" width="200" height="400"alt="Print do app IA">
     </div>
 
     <h2>Contato</h2>
     <div class="contact">
-      <a href="https://github.com/gustavostellecunha" target="_blank">GitHub</a>
-      <a href="https://www.linkedin.com/in/gustavostellecunha" target="_blank">LinkedIn</a>
-      <a href="mailto:gustavo@email.com">E-mail</a>
+      <a href="https://github.com/gostavosc" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+      <a href="https://www.linkedin.com/in/gustavo-stelle-cunha/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <a href="mailto:gustavoscdevmobile@gmail.com"><i class="fas fa-envelope"></i> E-mail</a>
     </div>
   </section>
 </body>
